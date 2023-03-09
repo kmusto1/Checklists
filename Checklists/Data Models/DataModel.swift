@@ -25,11 +25,22 @@ class DataModel {
         handleFirstTime()
     }
     
+    // Items in checklist.
+    class func nextChecklistItemID() -> Int {
+        let userDefaults = UserDefaults.standard
+        let itemID = userDefaults.integer(forKey: "ChecklistItemID")
+        userDefaults.set(itemID + 1, forKey: "ChecklistItemID")
+        userDefaults.synchronize()
+        return itemID
+    }
+    
+    // App directory.
     func documentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
     
+    // Data file path.
     func dataFilePath() -> URL {
         return documentsDirectory().appendingPathComponent("Checklists.plist")
     }
