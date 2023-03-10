@@ -10,6 +10,7 @@ import UIKit
 class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
     var checklist: Checklist!
     
+    // No large titles on load.
     override func viewDidLoad() {
         super.viewDidLoad()
         // Disable large titles for this view controller

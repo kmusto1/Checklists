@@ -51,6 +51,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         delegate?.itemDetailViewControllerDidCancel(self)
     }
     
+    // Adds checklist reminder
     @IBAction func done() {
         if let item = itemToEdit {
             item.text = textField.text!

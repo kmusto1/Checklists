@@ -11,7 +11,7 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     let cellIdentifier = "ChecklistCell"
     var dataModel: DataModel!
     
-    // Large titles.
+    // Large titles on load.
     override func viewDidLoad() {
         super.viewDidLoad()
         // Enable large titles
